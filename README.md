@@ -1,7 +1,7 @@
 # SQL_Project
 
 This dataset is related to Texture sales where we have used four tables names product_details,sales,product_heirarchy,product_prices.
-Let's assume that the CEO of company has asked us to check the details related to this Texture sales. So we are using SQL here which is an structure query language.
+Let's assume that the CEO of company has asked us to check the details related to this Texture sales. So we are using SQL here.
 We will try to find out answers for the below question:
 --What was the total quantity sold for all products?
 --which product has been sold most--
