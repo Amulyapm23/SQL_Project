@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container" id="login-container">
+  <h2>Login</h2>
+  <input type="password" id="password" placeholder="Enter Password" onkeypress="checkEnter(event)">
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="container" id="message-container" style="display: none;">
+  <h2>Welcome!</h2>
+  <p>This is your personalized message. You are logged in!</p>
+</div>
+
+<script>
+function login() {
+  var password = document.getElementById("password").value;
+  if (password === "230102") {
+    document.getElementById("login-container").style.display = "none";
+    document.getElementById("message-container").style.display = "block";
+  } else {
+    alert("Incorrect password!");
+  }
+}
+
+function checkEnter(event) {
+  if (event.keyCode === 13) { // 13 is the key code for Enter
+    login();
+  }
+}
+</script>
+
+</body>
+</html>
